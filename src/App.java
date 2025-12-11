@@ -1,6 +1,7 @@
 import controller.Stack;
 import models.Node;
 import models.Person;
+import controller.Queue;
 public class App {
     public static void main(String[] args) throws Exception {
         
@@ -13,6 +14,7 @@ public class App {
         node3.setNext(node4);
         System.out.println(node1.toString());
         runStackExample();
+        runQueueExample();
     }
     public static void runStackExample(){
             Stack<Person> stack = new Stack<Person>();
@@ -26,5 +28,20 @@ public class App {
             System.out.println("POP: " + stack.size());
             System.out.println("Size= " + stack.size());
             stack.printAllNodes();
-        }
+    }
+
+    public static void runQueueExample(){
+        Queue<Person> persons = new Queue<Person>();
+        persons.enqueue(new Person("Juan", 30));
+        persons.enqueue(new Person("Maria", 35));
+        persons.enqueue(new Person("Pepito", 32));
+        persons.enqueue(new Person("Diego", 31));
+        System.out.println("Size: " + persons.size());
+        persons.printAllNodes();
+        System.out.println(persons.dequeue());
+        System.out.println("Primera: " + persons.getFirst());
+        System.out.println("Ultima: " + persons.getLast());
+        System.out.println("Size: " + persons.size());
+        persons.printAllNodes();
+    }
 }

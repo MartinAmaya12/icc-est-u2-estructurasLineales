@@ -22,6 +22,6 @@ public class Person{
 
     @Override
     public String toString(){
-        return "Node [Nombre: " + name + "Edad: " + age + "]";
+        return "Node [Nombre: " + name + " , Edad: " + age + "]";
     }
 }

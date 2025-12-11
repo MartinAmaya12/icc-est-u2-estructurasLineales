@@ -54,9 +54,9 @@ public class Stack<T> {
 
     public void printAllNodes(){
         Node<T> current = top;
-        System.out.println("Clima -> ");
+        System.out.println("Cima-> ");
         while(current != null){
-            System.out.println(current.getValue()+ "_->") ;
+            System.out.println(current.getValue()+ "-->") ;
             current = current.getNext();
         }
         System.out.println("Fin!!!!!");
